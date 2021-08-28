@@ -1,0 +1,31 @@
+@media all and (max-width: 650px) {
+  .calculator {
+    width: 387px;
+
+    .buttons {
+      height: 478px;
+    }
+
+    .display {
+      height: 88px;
+    }
+
+    .button-grid {
+      grid-template-columns: repeat(4, 60px);
+      grid-template-rows: repeat(5, 60px);
+      div {
+        width: 60px;
+        height: 60px;
+
+        &.reset,
+        &.equals {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .display {
+    font-size: 32px;
+  }
+}

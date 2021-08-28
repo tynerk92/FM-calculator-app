@@ -1,0 +1,47 @@
+body.theme1 {
+  --clr-bg: #3b4664;
+  --clr-text: #fefffa;
+  --clr-display-bg: #181f32;
+  --clr-button: #eae3db;
+  --clr-primary: #d13f30;
+  --clr-secondary: #636e91;
+  --clr-button-text: var(--clr-display-bg);
+  --clr-button-text-alt: #fefeff;
+  --clr-calculator: #252d44;
+  --clr-btn-shadow: #b5a49a;
+  --clr-secondary-shadow: #414e71;
+  --clr-primary-shadow: #992315;
+}
+
+// 538px by 479px
+// screen 130px tall, same width
+
+body.theme2 {
+  --clr-bg: #e6e6e6;
+  --clr-text: #353529;
+  --clr-display-bg: #eeeeee;
+  --clr-button: #e5e4e0;
+  --clr-primary: #c85401;
+  --clr-secondary: #388187;
+  --clr-button-text: var(--clr-text);
+  --clr-calculator: #d3cdcd;
+  --clr-btn-shadow: #a69c90;
+  --clr-secondary-shadow: #1c6166;
+  --clr-primary-shadow: #893a02;
+}
+
+body.theme3 {
+  --clr-bg: #17062a;
+  --clr-text: #ffe234;
+  --clr-display-bg: #1e0836;
+  --clr-button: #331b4d;
+  --clr-primary: #00d9ce;
+  --clr-secondary: #59057e;
+  --clr-button-text: var(--clr-text);
+  --clr-button-text-alt: #fff9ff;
+  --clr-calculator: #1e0836;
+  --clr-btn-shadow: #841d9c;
+  --clr-secondary-shadow: #be15f3;
+  --clr-primary-shadow: #6df7ef;
+  --clr-text-equals: #000000;
+}

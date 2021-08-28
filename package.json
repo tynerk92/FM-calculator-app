@@ -1,0 +1,33 @@
+{
+  "name": "calculator-app-main",
+  "version": "1.0.0",
+  "description": "Frontend Mentor Calculat App Challenge",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon server.js -e html,scss",
+    "build-css": "node-sass --output ./public/css ./styles/style.scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tynerk92/FM-calculator-app.git"
+  },
+  "keywords": [
+    "Frontend",
+    "Mentor",
+    "Calculator",
+    "App"
+  ],
+  "author": "Kylon Tyner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tynerk92/FM-calculator-app/issues"
+  },
+  "homepage": "https://github.com/tynerk92/FM-calculator-app#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {}
+}

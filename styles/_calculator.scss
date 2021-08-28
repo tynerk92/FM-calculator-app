@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: var(--clr-text);
+}
+
+body {
+  background-color: var(--clr-bg);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  width: 547px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+
+  .theme-selector-wrapper {
+    display: flex;
+    font-size: 0.8em;
+    font-weight: 800;
+
+    .theme-numbers {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto 4px;
+      width: 80%;
+    }
+
+    .selector {
+      position: relative;
+      width: 64px;
+      height: 24px;
+      background-color: var(--clr-calculator);
+      border-radius: 24px;
+      cursor: pointer;
+
+      &:before {
+        content: "THEME";
+        position: absolute;
+        left: -100%;
+        top: 50%;
+        transform: translateY(-50%);
+        letter-spacing: 1px;
+      }
+
+      &:after {
+        content: "";
+        height: 16px;
+        width: 16px;
+        background-color: var(--clr-primary);
+        position: absolute;
+        left: 4px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 16px;
+        transition: left 0.2s ease;
+      }
+    }
+  }
+}
+
+.display {
+  height: 130px;
+  width: 100%;
+  background-color: var(--clr-display-bg);
+  margin-bottom: 24px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--clr-button-text-alt);
+  font-size: 48px;
+  font-weight: bold;
+  padding: 0 32px;
+  position: relative;
+
+  #display-op {
+    position: absolute;
+    right: 1em;
+    top: 0.5em;
+    opacity: 0.4;
+    font-size: 18px !important;
+  }
+}
+
+.buttons {
+  position: relative;
+  background-color: var(--clr-calculator);
+  height: 464px;
+  border-radius: 8px;
+  padding: 32px;
+
+  .button-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(5, 58px);
+    grid-template-areas:
+      "7 8 9 delete"
+      "4 5 6 +"
+      "1 2 3 -"
+      ". 0 / x"
+      "reset reset equals equals";
+
+    gap: 27.5px;
+
+    div {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--clr-button);
+      color: var(--clr-button-text);
+      border-radius: 8px;
+      font-size: 32px;
+      font-weight: bold;
+      filter: drop-shadow(0px 4px 0px var(--clr-btn-shadow));
+      cursor: pointer;
+
+      &.delete,
+      &.reset {
+        background-color: var(--clr-secondary);
+        filter: drop-shadow(0px 4px 0px var(--clr-secondary-shadow));
+      }
+
+      &.equals {
+        background-color: var(--clr-primary);
+        filter: drop-shadow(0px 4px 0px var(--clr-primary-shadow));
+        color: var(--clr-text-equals, --clr-button-text-alt);
+      }
+
+      &.reset {
+        grid-column: 1 / span 2;
+      }
+
+      &.equals {
+        grid-column: 3 / span 2;
+      }
+
+      &.delete,
+      &.reset {
+        color: var(--clr-button-text-alt);
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+body.theme2 .selector:after {
+  left: calc(50% - 8px) !important;
+}
+
+body.theme3 .selector:after {
+  left: calc(100% - 20px) !important;
+}
